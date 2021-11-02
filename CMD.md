@@ -1,4 +1,6 @@
-# Linux
+# Command
+
+## Linux
 1. 始終打開sudo權限
 ```
 $ sudo -s
@@ -29,7 +31,7 @@ $ echo $PATH
 ```
 
 ---
-# Nginx
+## Nginx
 1. 安裝Nginx
 ```
 $ sudo apt-get update
@@ -51,7 +53,7 @@ $ sudo systemctl stop nginx
 $ sudo systemctl restart nginx
 ```
 
-## 使用docker image快速安裝
+### 使用docker image快速安裝
 1. 下載Nginx image
 ```
 $ docker pull nginx
@@ -79,7 +81,7 @@ $ docker run --name nginx-container -p 7777:80 -v ~/galaxy/nginx:/usr/share/ngin
 4. 在瀏覽器輸入localhost:7777會看到Hello world!
 
 ---
-# Docker
+## Docker
 1. 新增docker到sudo用戶組
 ```
 $ sudo groupadd docker
@@ -100,7 +102,7 @@ $ sudo chmod 777 /var/run/docker.sock
 $ docker volume list
 ```
 
-## docker-compose
+### docker-compose
 1. 安裝docker-compose
 ```
 $ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -135,7 +137,7 @@ $ docker-compose stop
 $ docker-compose down
 ```
 
-## Container
+### Container
 1. 創建容器
 ```
 $ docker create it --name=CONTAINER_NAME CONTAINER_NAME 
@@ -238,7 +240,7 @@ $ docker cp /hostPath/to/folder CONTAINER_NAME:/path/
 $ docker run -d -P --name CONTAINER_NAME -v /host/folder:/path/folder
 ```
 
-## Image
+### Image
 (不指定 tag, default 為 latest)
 1. 拉取Image
 ```
@@ -283,7 +285,7 @@ $ docker system prune
 $ docker load -i IMAGE_NAME.tar
 ```
 
-## Repository
+### Repository
 1. 推送Image到Docker hub遠端倉庫
 
 ```
@@ -323,7 +325,7 @@ $ docker pull localhost:5000/busybox
 $ docker run -v /var/lib/registry/data:/var/lib/registry -d -p 5000:5000 --name registry registry:2.7
 ```
 
-## Network
+### Network
 1. 列出所有docker network
 ```
 $ docker network ls
@@ -345,7 +347,7 @@ $ docker exec -it galaxy_elderwand2 ping -c 5 galaxy_silverstone
 ```
 
 ---
-# KVM virsh
+## KVM virsh
 1. 列出所有VM
 ```
 $ virsh list --all
