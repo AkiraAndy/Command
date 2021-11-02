@@ -278,6 +278,11 @@ $ docker image prune
 $ docker system prune
 ```
 
+6. 載入Image
+```
+$ docker load -i IMAGE_NAME.tar
+```
+
 ## Repository
 1. 推送Image到Docker hub遠端倉庫
 
